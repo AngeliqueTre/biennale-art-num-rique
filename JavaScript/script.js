@@ -1,3 +1,6 @@
+/*NAVIGUATION*/
+
+
 /*START CANVAS HEADER*/
 window.onload = function()
 {

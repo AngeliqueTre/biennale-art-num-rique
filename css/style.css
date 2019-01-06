@@ -137,44 +137,57 @@ body {
   text-align: center;
 }
 
+nav {
+  display: none;
+  position: absolute;
+  top: 300px;
+  left: 465px;
+  z-index: 1;
+}
+
+nav ul {
+  transform: rotate(31deg);
+}
+
+nav ul a {
+  font-size: 2.5rem;
+  color: yellow;
+}
+
+nav ul a:hover {
+  color: yellow;
+}
+
+nav ul span {
+  color: white;
+}
+
 /*HEADER*/
 header img {
   position: absolute;
 }
 
-header img:nth-child(1){
+header img:nth-child(1) {
   top: 70px;
   left: 568px;
   height: 200px;
 }
 
-header img:nth-child(2){
+header img:nth-child(2) {
   top: 430px;
   left: 500px;
   height: 270px;
 }
 
-/*BLOC DESCRIPTION*/
-section h2 {
-  padding: 5px;
-  font-size: 2rem;
+/*ECRAN LCD*/
+.positionEcran{
+  position: fixed;
+  z-index: 1;
+  left: 260px;
 }
 
-section p {
-  padding: 5px;
-  font-size: 0.8rem;
-}
-
-.bloc1 {
-  margin-top: 70px;
-}
-
-
-
-/*FOOTER*/
 #wrapper {
   width: 756px;
-  margin: 30px auto;
 }
 
 #theMarquee {
@@ -200,4 +213,23 @@ section p {
 
 .on {
   background-color: yellow;
+}
+
+/*BLOC DESCRIPTION*/
+section h2 {
+  padding: 5px;
+  font-size: 2rem;
+}
+
+section p {
+  padding: 5px;
+  font-size: 0.8rem;
+}
+
+.row:nth-child(4){
+  margin-bottom: 60px;
+}
+
+.bloc1 {
+  margin-top: 70px;
 }
