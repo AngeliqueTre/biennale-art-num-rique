@@ -163,8 +163,8 @@ nav ul span {
 }
 
 /*HEADER*/
-canvas {
-  margin: 0 auto;
+header {
+  text-align: center;
 }
 header img {
   position: absolute;
