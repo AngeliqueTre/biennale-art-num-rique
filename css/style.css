@@ -163,7 +163,10 @@ nav ul span {
 }
 
 /*HEADER*/
-header img {
+header{
+  text-align: center;
+}
+/*header img {
   position: absolute;
 }
 
@@ -177,13 +180,13 @@ header img:nth-child(2) {
   top: 430px;
   left: 500px;
   height: 270px;
-}
+}*/
 
 /*ECRAN LCD*/
 .positionEcran{
   position: fixed;
   z-index: 1;
-  left: 260px;
+  text-align: center;
 }
 
 #wrapper {
