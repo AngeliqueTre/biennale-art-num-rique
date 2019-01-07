@@ -163,30 +163,28 @@ nav ul span {
 }
 
 /*HEADER*/
-header{
-  text-align: center;
+canvas {
+  margin: 0 auto;
 }
-/*header img {
+header img {
   position: absolute;
 }
 
 header img:nth-child(1) {
   top: 70px;
-  left: 568px;
   height: 200px;
 }
 
 header img:nth-child(2) {
   top: 430px;
-  left: 500px;
   height: 270px;
-}*/
+}
 
 /*ECRAN LCD*/
 .positionEcran{
   position: fixed;
   z-index: 1;
-  text-align: center;
+  left: 260px;
 }
 
 #wrapper {

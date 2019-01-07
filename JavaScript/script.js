@@ -50,11 +50,11 @@ window.onload = function()
       context.fill();//On trace seulement les lignes.
       context.closePath();
 
-      context.font="4.5rem Arial Black";
+      context.font="bold 4.5rem Arial";
       context.fillStyle = "#000000";
       context.fillText("BANP", 530, 310);
 
-      context.font="0.8rem Arial Black";
+      context.font="bold 0.8rem Arial";
       context.fillStyle = "#000000";
       context.fillText("BIENNALE ART NUMERIQUE PHOCEENNE", 495, 340);
 
