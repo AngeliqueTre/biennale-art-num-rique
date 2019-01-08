@@ -61,7 +61,6 @@ body {
 }
 
 #road {
-  margin-top: -512px;
   height: auto;
   background: url(http://www.adobetutorialz.com/content_images/AdobePhotoshop/Textures&Patterns/road/ASPHALT3.JPG) repeat;
   -webkit-animation: drive 3s infinite linear;
@@ -131,11 +130,8 @@ body {
     transform: translateY(512px);
   }
 }
+/* END BACKGROUND*/
 
-.center {
-  margin-top: 1px;
-  text-align: center;
-}
 
 nav {
   display: none;
@@ -162,6 +158,7 @@ nav ul span {
   color: white;
 }
 
+
 /*HEADER*/
 header {
   text-align: center;
@@ -180,12 +177,35 @@ header img:nth-child(2) {
   height: 270px;
 }
 
+
+/*BLOC DESCRIPTION*/
+section h2 {
+  padding: 5px;
+  font-size: 2rem;
+}
+
+section p {
+  padding: 5px;
+  font-size: 0.8rem;
+}
+.row:nth-child(1), .row:nth-child(2), .row:nth-child(3), .row:nth-child(4){
+    margin-top: 30px;
+}
+.row:nth-child(4){
+  margin-bottom: 30px;
+}
+
+
+/*FOOTER*/
 /*ECRAN LCD*/
 .positionEcran{
-  position: fixed;
-  z-index: 1;
-  left: 260px;
+  text-align: center;
+  text-align: -webkit-center;
+  margin-bottom: 30px;
 }
+/*.positionFixe{
+  position: fixed;
+}*/
 
 #wrapper {
   width: 756px;
@@ -216,21 +236,7 @@ header img:nth-child(2) {
   background-color: yellow;
 }
 
-/*BLOC DESCRIPTION*/
-section h2 {
-  padding: 5px;
-  font-size: 2rem;
-}
-
-section p {
-  padding: 5px;
-  font-size: 0.8rem;
-}
-
-.row:nth-child(4){
-  margin-bottom: 60px;
-}
-
-.bloc1 {
-  margin-top: 70px;
+.center {
+  margin-top: 1px;
+  text-align: center;
 }
