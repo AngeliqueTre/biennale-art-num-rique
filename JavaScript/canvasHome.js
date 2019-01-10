@@ -66,6 +66,40 @@ window.onload = function() {
   }, false);
   personne.src = "panneau.png";
 }
-
-
 /*END CANAVS HEADER*/
+
+  var canvas2 = document.getElementById('monCanvas2');
+  var context2 = canvas2.getContext('2d');
+
+  context2.lineWidth = 39;
+  context2.lineJoin = 'round';
+  context2.beginPath(); //On démarre un nouveau tracé
+  context2.moveTo(290, 600); //On se déplace au coin inférieur gauche
+  context2.lineTo(640, 25);
+  context2.lineTo(990, 600);
+  context2.lineTo(290, 600);
+  context2.lineTo(500, 255);
+  context2.strokeStyle = "#00000063";
+  context2.stroke(); //On trace seulement les lignes.
+  context2.closePath();
+
+  /*context2.lineWidth = 30;
+  context2.lineJoin = 'round';
+  context2.beginPath(); //On démarre un nouveau tracé
+  context2.moveTo(315, 585); //On se déplace au coin inférieur gauche
+  context2.lineTo(640, 50);
+  context2.lineTo(965, 585);
+  context2.lineTo(315, 585);
+  context2.lineTo(500, 280);
+  context2.strokeStyle = "#00000063";
+  context2.stroke(); //On trace seulement les lignes.
+  context2.closePath();*/
+
+  context2.beginPath(); //On démarre un nouveau tracé
+  context2.moveTo(325, 580.5); //On se déplace au coin inférieur gauche
+  context2.lineTo(640, 63);
+  context2.lineTo(955, 580.5);
+  context2.lineTo(325, 580.5);
+  context2.fillStyle = "#00000063";
+  context2.fill(); //On trace seulement les lignes.
+  context2.closePath();
