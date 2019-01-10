@@ -1,38 +1,20 @@
 /*COMMUN*/
 h1, h2, h3, h4, h5, h6, p, ul, li {
   text-transform: uppercase;
+  font-weight: bold;
 }
 
-.description {
-  background-color: #F4E027;
-  padding: 10px;
-  height: 200px;
-  margin-bottom: 15px;
+a {
+  color: black;
 }
 
-.border-panneau {
-  border: 15px solid black;
-  background-color: transparent;
-  display: flex;
+a:hover {
+  text-decoration: none;
+  color: black;
 }
 
-.description-bloc {
-  flex: 2;
-  flex-direction: column;
-  margin: 0 12px;
-}
-
-.img-body {
-  flex: 1;
-}
-
-.bloc {
-  flex-direction: row;
-  height: 180px;
-}
-
-.img-des {
-  width: 165px;
+a:active {
+  color: red;
 }
 
 body {
@@ -41,6 +23,38 @@ body {
   height: 100%;
   width: 100%;
   background-color: black;
+  font-family: arial, sans-serif;
+}
+
+
+  @media (min-width: 768px){
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+    *width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+    max-width: 14.285714285714285714285714285714% !important;
+flex:none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+    max-width: 14.285714285714285714285714285714% !important;
+flex:none !important;
+  }
 }
 
 /*BACKGROUND*/
@@ -69,6 +83,11 @@ body {
   -o-animation: drive 3s infinite linear;
   animation: drive 3s infinite linear;
 }
+.center {
+  margin-top: 1px;
+  text-align: center;
+}
+
 
 #line {
   display: inline-block;
@@ -130,14 +149,14 @@ body {
     transform: translateY(512px);
   }
 }
+
 /* END BACKGROUND*/
 
-
+/*START NAV*/
 nav {
-  display: none;
   position: absolute;
-  top: 300px;
-  left: 465px;
+  top: 340px;
+  left: 445px;
   z-index: 1;
 }
 
@@ -146,37 +165,16 @@ nav ul {
 }
 
 nav ul a {
-  font-size: 2.5rem;
-  color: yellow;
+  font-size: 2.1rem;
 }
+/*END NAV*/
 
-nav ul a:hover {
-  color: yellow;
-}
-
-nav ul span {
-  color: white;
-}
-
-
+/*PAGE INDEX*/
 /*HEADER*/
-header {
-  text-align: center;
-}
-header img {
-  position: absolute;
-}
 
-header img:nth-child(1) {
-  top: 70px;
+#cone {
   height: 200px;
 }
-
-header img:nth-child(2) {
-  top: 430px;
-  height: 270px;
-}
-
 
 /*BLOC DESCRIPTION*/
 section h2 {
@@ -188,24 +186,45 @@ section p {
   padding: 5px;
   font-size: 0.8rem;
 }
-.row:nth-child(1), .row:nth-child(2), .row:nth-child(3), .row:nth-child(4){
-    margin-top: 30px;
-}
-.row:nth-child(4){
-  margin-bottom: 30px;
+
+section.row {
+  margin-top: 50px;
 }
 
+.row:nth-child(4) {
+  margin-bottom: 50px;
+}
+
+.description {
+  background-color: #F4E027;
+  border: 10px solid black;
+  border-radius:50px;
+}
+
+.description-bloc {
+  flex: 2;
+}
+
+.img-body {
+  flex: 1;
+}
+
+.img-des1, .img-des3{
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.img-des2, .img-des4{
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 40px;
+}
 
 /*FOOTER*/
 /*ECRAN LCD*/
-.positionEcran{
+footer {
   text-align: center;
   text-align: -webkit-center;
-  margin-bottom: 30px;
+  padding: 5px;
 }
-/*.positionFixe{
-  position: fixed;
-}*/
 
 #wrapper {
   width: 756px;
@@ -236,7 +255,85 @@ section p {
   background-color: yellow;
 }
 
-.center {
-  margin-top: 1px;
-  text-align: center;
+/*PAGE PROGRAMMATION*/
+/*HEADER*/
+.headerPageProgrammation, .headerPageInformation {
+  margin-top: 10px;
+}
+
+.bg-white, .bg-red {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: bold;
+  padding: 0;
+}
+
+.bg-white ul {
+  font-size: 1rem;
+  list-style: none;
+  padding: 5px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-white p, .bg-red p {
+  margin-bottom: 0;
+}
+
+.accordion {
+  margin: 50px auto;
+}
+
+.accordion .card:nth-child(1) {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.accordion .card:nth-child(3) {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.accordion h2 button {
+  font-size: 3rem;
+  color: red;
+}
+
+.accordion h2 button:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-header {
+  background-color: inherit;
+  border-bottom: none;
+}
+
+/*PAGE INFORMAATION*/
+/*HEADER*/
+.info {
+  font-size: 4.2rem;
+}
+
+.firstRow{
+  margin: 50px auto;
+  margin-bottom: 0;
+}
+
+.secondRow p {
+  font-size: 1rem;
+}
+
+.thridRow p {
+  font-size: 0.8rem;
+}
+label, input{
+  font-size: 1rem;
 }
