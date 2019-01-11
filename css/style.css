@@ -296,12 +296,6 @@ footer {
   font-weight: bold;
 }
 
-
-
-.bg-white p, .bg-red p {
-  margin-bottom: 0;
-}
-
 .accordion {
   margin: 50px auto;
 }
