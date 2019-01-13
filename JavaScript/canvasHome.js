@@ -82,19 +82,7 @@ window.onload = function() {
   context2.strokeStyle = "#00000063";
   context2.stroke(); //On trace seulement les lignes.
   context2.closePath();
-
-  /*context2.lineWidth = 30;
-  context2.lineJoin = 'round';
-  context2.beginPath(); //On démarre un nouveau tracé
-  context2.moveTo(315, 585); //On se déplace au coin inférieur gauche
-  context2.lineTo(640, 50);
-  context2.lineTo(965, 585);
-  context2.lineTo(315, 585);
-  context2.lineTo(500, 280);
-  context2.strokeStyle = "#00000063";
-  context2.stroke(); //On trace seulement les lignes.
-  context2.closePath();*/
-
+  
   context2.beginPath(); //On démarre un nouveau tracé
   context2.moveTo(325, 580.5); //On se déplace au coin inférieur gauche
   context2.lineTo(640, 63);

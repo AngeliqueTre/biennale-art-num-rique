@@ -1,5 +1,5 @@
 /*COMMUN*/
-h1, h2, h3, h4, h5, h6, p, ul, li {
+h1, h2, h3, h4, h5, h6, p, ul, li, label, input, button {
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -24,28 +24,6 @@ body {
   width: 100%;
   background-color: black;
   font-family: arial, sans-serif;
-}
-
-@media (min-width: 768px) {
-
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 100%;
-    *width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
-    max-width: 14.285714285714285714285714285714% !important;
-    flex: none !important;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -157,8 +135,8 @@ body {
 /*START NAV*/
 nav {
   position: absolute;
-  top: 340px;
-  left: 445px;
+  top: 325px;
+  left: 460px;
   z-index: 1;
 }
 
@@ -299,7 +277,9 @@ footer {
 .accordion {
   margin: 50px auto;
 }
-
+.card{
+  background-color: inherit;
+}
 .accordion .card:nth-child(1) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -320,10 +300,49 @@ footer {
   font-weight: bold;
   text-decoration: none;
 }
+.accordion h2 button:focus {
+  text-decoration: none;
+}
 
 .card-header {
-  background-color: inherit;
+  background-color: white;
   border-bottom: none;
+}
+
+.right{
+  animation-duration: 5s;
+  animation-name: sliderin;
+  animation-direction: normal;
+}
+
+@keyframes sliderin {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.left{
+  animation-duration: 5s;
+  animation-name: sliderleft;
+  animation-direction: reverse;
+}
+
+@keyframes sliderleft {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
 }
 
 /*PAGE INFORMAATION*/
@@ -337,14 +356,122 @@ footer {
   margin-bottom: 0;
 }
 
-.secondRow p {
-  font-size: 1rem;
+.adress{
+  color: red;
 }
 
-.thridRow p {
+
+.fourthRow p {
   font-size: 0.8rem;
 }
 
-label, input {
-  font-size: 1rem;
+label {
+  font-size: 1.5rem;
+}
+
+label, input, input:focus{
+  color: red;
+}
+input, textarea{
+  border: 2px solid red;
+  outline: none;
+}
+textarea{
+  resize: none;
+}
+
+.btn-outline-danger{
+  font-size: 1.5rem;
+  border: 2px solid red;
+}
+.btn-outline-danger:hover{
+  background-color: : red;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 900px) {
+
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+    max-width: 14.285714285714285714285714285714% !important;
+    flex: none !important;
+  }
+  nav {
+    top: 180px;
+    left: 275px;
+  }
+
+  nav ul a {
+    font-size: 1.2rem;
+  }
+  .headerIndex {
+    height: 390px;
+}
+
+  #cone{
+    height: 120px;
+    margin-top: 40px;
+  }
+  .bg-white ul {
+    font-size: 0.6rem;
+  }
+  .info{
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 100%;
+    *width: 100%;
+  }
+  nav {
+    top:80px;
+    left:125px;
+    z-index: 2;
+  }
+
+  nav ul a {
+    font-size: 0.6em;
+  }
+  .headerIndex {
+      height: 185px;
+  }
+  #cone {
+    height: 50px;
+    margin-top: 20px;
+    z-index: 1;
+}
+section.row{
+  margin-top: 20px;
+}
+section h2 {
+    padding: 5px;
+    font-size: 1.5rem;
+}
+.description{
+  margin: 0 10px;
+}
+  .headerPageInformation, .headerPageProgrammation{
+    margin: 0 2px;
+  }
+  .bg-white ul {
+    width: 100%;
+    text-align: center;
+  }
+   h2{
+    font-size: 1.3rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+  label, input{
+    font-size: 0.8rem;
+  }
 }
